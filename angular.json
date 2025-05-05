@@ -65,7 +65,8 @@
               "buildTarget": "vehicle-spedition:build:production"
             },
             "development": {
-              "buildTarget": "vehicle-spedition:build:development"
+              "buildTarget": "vehicle-spedition:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

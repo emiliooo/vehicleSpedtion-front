@@ -22,6 +22,10 @@ export class ApiService {
     });
   }
 
+  addDriver(driver:any) {
+      return this.http.post(`${this.baseUrl}/login`, driver,{ withCredentials: true});
+  }
+
   saveToken(token: string) {
     localStorage.setItem('jwtToken', token);
   }

@@ -1,11 +1,24 @@
-<div style="padding: 2rem">
-    <h2>Logowanie</h2>
-    <form (ngSubmit)="onSubmit()">
-      <input type="text"  name="username" placeholder="Login" required /><br /><br />
-      <input type="password"  name="password" placeholder="Hasło" required /><br /><br />
-      <button type="submit">Zaloguj</button>
-    </form>
-    <p>{{ message }}</p>
-  </div>
+<div style="padding: 2rem; max-width: 400px; margin: auto;">
+  <h2>Logowanie</h2>
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>Login</mat-label>
+      <input matInput type="text" name="username" ngModel required />
+    </mat-form-field>
 
-  <button (click)="driver()">driversBtn</button>
+    <mat-form-field appearance="fill" style="width: 100%; margin-top: 1rem;">
+      <mat-label>Hasło</mat-label>
+      <input matInput type="password" name="password" ngModel required />
+    </mat-form-field>
+
+    <div style="margin-top: 2rem;">
+      <button mat-raised-button color="primary" type="submit">Zaloguj</button>
+    </div>
+  </form>
+
+  <p style="margin-top: 1rem;">{{ message }}</p>
+</div>
+
+<div style="text-align: center; margin-top: 2rem;">
+  <button mat-stroked-button color="accent" (click)="driver()">driversBtn</button>
+</div>

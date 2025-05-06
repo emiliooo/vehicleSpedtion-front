@@ -1,0 +1,40 @@
+<div style="padding: 2rem; max-width: 600px; margin: auto;">
+    <h2>Dodaj Nowego Kierowcę</h2>
+    <form (ngSubmit)="onSubmit()" #driverForm="ngForm">
+      <!-- Full Name -->
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Imię i nazwisko</mat-label>
+        <input matInput type="text" [(ngModel)]="driver.fullName" name="fullName" required />
+      </mat-form-field>
+  
+      <!-- License Number -->
+      <mat-form-field appearance="fill" style="width: 100%; margin-top: 1rem;">
+        <mat-label>Numer prawa jazdy</mat-label>
+        <input matInput type="text" [(ngModel)]="driver.licenseNumber" name="licenseNumber" required />
+      </mat-form-field>
+  
+      <!-- License Category -->
+      <mat-form-field appearance="fill" style="width: 100%; margin-top: 1rem;">
+        <mat-label>Kategoria prawa jazdy</mat-label>
+        <input matInput type="text" [(ngModel)]="driver.licenseCategory" name="licenseCategory" required />
+      </mat-form-field>
+  
+      <!-- Contact Phone -->
+      <mat-form-field appearance="fill" style="width: 100%; margin-top: 1rem;">
+        <mat-label>Telefon kontaktowy</mat-label>
+        <input matInput type="text" [(ngModel)]="driver.contactPhone" name="contactPhone" required />
+      </mat-form-field>
+  
+      <!-- Incident History -->
+      <mat-form-field appearance="fill" style="width: 100%; margin-top: 1rem;">
+        <mat-label>Historia wypadków</mat-label>
+        <textarea matInput [(ngModel)]="driver.incidentHistory" name="incidentHistory"></textarea>
+      </mat-form-field>
+  
+      <!-- Submit Button -->
+      <div style="margin-top: 2rem;">
+        <button mat-raised-button color="primary" type="submit">Dodaj Kierowcę</button>
+      </div>
+    </form>
+  </div>
+  

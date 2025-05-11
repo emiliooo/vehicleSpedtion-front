@@ -17,9 +17,7 @@ export class ApiService {
   }
 
   drivers() {
-    return this.http.get(`${this.baseUrlSecond}/drivers`, {
-      headers: this.getAuthHeaders()
-    });
+    return this.http.get(`${this.baseUrlSecond}/drivers`);
   }
 
   addDriver(driver:any) {
